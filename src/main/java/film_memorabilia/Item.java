@@ -4,25 +4,31 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Item {
-    protected int buyPrice;
-    protected int shipping;
-    protected int marketValue;
+    protected String itemDescription;
+    protected double buyPrice;
+    protected double shipping;
+    protected double marketValue;
 
-    public Item(int buyPrice, int shipping, int marketValue) {
+    public Item(String itemDescription, double buyPrice, double shipping, double marketValue) {
+        this.itemDescription = itemDescription;
         this.buyPrice = buyPrice;
         this.shipping = shipping;
         this.marketValue = marketValue;
     }
 
-    public int getBuyPrice() {
+    public String getDescription() {
+        return this.itemDescription;
+    }
+
+    public double getBuyPrice() {
         return this.buyPrice;
     }
 
-    public int getShipping() {
+    public double getShipping() {
         return this.shipping;
     }
 
-    public int getMarketValue() {
+    public double getMarketValue() {
         return this.marketValue;
     }
 
