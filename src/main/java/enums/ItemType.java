@@ -6,6 +6,7 @@ public enum ItemType {
     SCRIPT,
     COSTUME,
     PROP,
-    VEHICLE
+    VEHICLE,
+    PUPPET
 
 }
