@@ -1,15 +1,15 @@
 package film_memorabilia;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import behaviours.ICollect;
 
-public abstract class Item {
+
+public abstract class Item implements ICollect{
     protected String itemDescription;
-    protected double buyPrice;
-    protected double shipping;
-    protected double marketValue;
+    protected int buyPrice;
+    protected int shipping;
+    protected int marketValue;
 
-    public Item(String itemDescription, double buyPrice, double shipping, double marketValue) {
+    public Item(String itemDescription, int buyPrice, int shipping, int marketValue) {
         this.itemDescription = itemDescription;
         this.buyPrice = buyPrice;
         this.shipping = shipping;
@@ -20,15 +20,15 @@ public abstract class Item {
         return this.itemDescription;
     }
 
-    public double getBuyPrice() {
+    public int getBuyPrice() {
         return this.buyPrice;
     }
 
-    public double getShipping() {
+    public int getShipping() {
         return this.shipping;
     }
 
-    public double getMarketValue() {
+    public int getMarketValue() {
         return this.marketValue;
     }
 

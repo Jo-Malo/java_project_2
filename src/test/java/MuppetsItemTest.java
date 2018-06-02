@@ -3,6 +3,8 @@ import film_memorabilia.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class MuppetsItemTest {
@@ -11,7 +13,7 @@ public class MuppetsItemTest {
 
     @Before
     public void before() {
-        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200.00, 30.00,300.00);
+        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300);
     }
 
     @Test

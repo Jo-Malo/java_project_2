@@ -11,7 +11,7 @@ public class StarWarsItemTest {
 
     @Before
     public void before() {
-        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, "Stormtrooper helmet",1000.00, 20.00, 50000.00);
+        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, "Stormtrooper helmet",1000, 20, 50000);
     }
 
     @Test
@@ -43,5 +43,6 @@ public class StarWarsItemTest {
     public void starWarsCostumeHasMarketValue() {
         assertEquals(50000.00, starWarsCostume.getMarketValue(), 0.01);
     }
+
 }
 
