@@ -1,18 +1,21 @@
 package film_memorabilia;
 
+import java.util.Date;
 
 public abstract class Item{
     protected String itemDescription;
     protected int buyPrice;
     protected int shipping;
     protected int marketValue;
+    protected Date date;
 
 
-    public Item(String itemDescription, int buyPrice, int shipping, int marketValue) {
+    public Item(String itemDescription, int buyPrice, int shipping, int marketValue, Date date) {
         this.itemDescription = itemDescription;
         this.buyPrice = buyPrice;
         this.shipping = shipping;
         this.marketValue = marketValue;
+        this.date = date;
     }
 
     public String getDescription() {
@@ -33,5 +36,9 @@ public abstract class Item{
 
     public int setMarketValue(int marketValue) {
         return this.marketValue = marketValue;
+    }
+
+    public Date getDateBought() {
+        return date;
     }
 }

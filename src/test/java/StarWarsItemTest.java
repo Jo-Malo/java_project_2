@@ -3,15 +3,18 @@ import film_memorabilia.StarWarsItem;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class StarWarsItemTest {
 
     StarWarsItem starWarsCostume;
+    Date date;
 
     @Before
     public void before() {
-        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, "Stormtrooper helmet",1000, 20, 50000);
+        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, "Stormtrooper helmet",1000, 20, 50000, date);
     }
 
     @Test

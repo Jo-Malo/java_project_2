@@ -3,15 +3,19 @@ import film_memorabilia.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class MuppetsItemTest {
 
     MuppetsItem muppetsItemPuppet;
+    Date date;
 
     @Before
     public void before() {
-        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300);
+        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300, date);
+
     }
 
     @Test
@@ -43,5 +47,10 @@ public class MuppetsItemTest {
     public void canSetMarketValue() {
         muppetsItemPuppet.setMarketValue(300);
         assertEquals(300, muppetsItemPuppet.getMarketValue());
+    }
+
+    @Test
+    public void canGetDateBought() {
+        assertEquals(date, muppetsItemPuppet.getDateBought());
     }
 }

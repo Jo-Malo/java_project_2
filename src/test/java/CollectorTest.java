@@ -2,20 +2,24 @@ import film_memorabilia.*;
 import org.junit.Before;
 import org.junit.Test;
 
+
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class CollectorTest {
     Collector collector;
     Beaker beaker;
-    Lucas lucas;
+    GeorgeLucas georgeLucas;
     MuppetsItem muppetsItem;
     StarWarsItem starWarsItem;
+    Date date;
 
     @Before
     public void before() {
         collector = new Collector("Finn");
-        beaker = new Beaker("Red, fluffy and gormless looking", 250, 50,300);
-        lucas = new Lucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 150);
+        beaker = new Beaker("Red, fluffy and gormless looking", 250, 50,300, date);
+        georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 150, date);
     }
 
     @Test
@@ -36,7 +40,7 @@ public class CollectorTest {
 
     @Test
     public void canAddLucasAndBeakerToCollection() {
-        collector.addToCollection(lucas);
+        collector.addToCollection(georgeLucas);
         collector.addToCollection(beaker);
         assertEquals(2, collector.getTotalCollectionSize());
     }
@@ -51,7 +55,7 @@ public class CollectorTest {
     @Test
     public void canGetValueOfTotalCollection() {
         collector.addToCollection(beaker);
-        collector.addToCollection(lucas);
+        collector.addToCollection(georgeLucas);
         assertEquals(350, collector.totalValueOfCollection(250, 100));
     }
 
@@ -70,7 +74,7 @@ public class CollectorTest {
 
     @Test
     public void canGetTotalValueOfStarWars() {
-        collector.addToStarWarsCollection(lucas);
+        collector.addToStarWarsCollection(georgeLucas);
         assertEquals(100, collector.calculateTotalValueOfStarWarsCollection());
     }
 

@@ -3,6 +3,7 @@ package film_memorabilia;
 import enums.ItemType;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class StarWarsItem extends Item{
@@ -11,8 +12,8 @@ public class StarWarsItem extends Item{
 
     private ArrayList<StarWarsItem> starWarsItems;
 
-    public StarWarsItem(String film, ItemType type, String itemDescription, int buyPrice, int shipping, int marketValue) {
-        super(itemDescription, buyPrice, shipping, marketValue);
+    public StarWarsItem(String film, ItemType type, String itemDescription, int buyPrice, int shipping, int marketValue, Date date) {
+        super(itemDescription, buyPrice, shipping, marketValue, date);
             this.film = film;
             this.type = type;
 
@@ -26,4 +27,6 @@ public class StarWarsItem extends Item{
     public ItemType getType() {
         return this.type;
     }
+
+
 }
