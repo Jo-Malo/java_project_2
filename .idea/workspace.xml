@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dd21106-6292-4f38-9681-1b85ce545c39" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Collector.class" afterPath="$PROJECT_DIR$/out/production/classes/Collector.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/behaviours/ICollect.class" afterPath="$PROJECT_DIR$/out/production/classes/behaviours/ICollect.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/film_memorabilia/Item.class" afterPath="$PROJECT_DIR$/out/production/classes/film_memorabilia/Item.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/film_memorabilia/MuppetsItem.class" afterPath="$PROJECT_DIR$/out/production/classes/film_memorabilia/MuppetsItem.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/film_memorabilia/StarWarsItem.class" afterPath="$PROJECT_DIR$/out/production/classes/film_memorabilia/StarWarsItem.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/MuppetsItemTest.class" afterPath="$PROJECT_DIR$/out/test/classes/MuppetsItemTest.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/StarWarsItemTest.class" afterPath="$PROJECT_DIR$/out/test/classes/StarWarsItemTest.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/behaviours/ICollect.java" afterPath="$PROJECT_DIR$/src/main/java/behaviours/ICollect.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/film_memorabilia/Beaker.java" afterPath="$PROJECT_DIR$/src/main/java/film_memorabilia/Beaker.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/film_memorabilia/Item.java" afterPath="$PROJECT_DIR$/src/main/java/film_memorabilia/Item.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java" afterPath="$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java" afterPath="$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java" />
     </list>
@@ -33,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state relative-caret-position="345">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="e#468#469#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
@@ -156,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StarWarsItem.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StarWarsItem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="315">
+              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -169,8 +158,8 @@
       <file leaf-file-name="MuppetsItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#456#457#0" expanded="true" />
@@ -519,9 +508,9 @@
         <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/Beaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/Lucas.java" />
         <option value="$PROJECT_DIR$/src/main/java/behaviours/ICollect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java" />
       </list>
     </option>
   </component>
@@ -845,9 +834,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_collections_test - 2018.06.03 at 16h 38m 40s.xml">
-      <configuration name="All in collections_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_collections_test - 2018.06.03 at 16h 42m 32s.xml">
       <configuration name="All in collections_test" configurationId="JUnit" />
     </history-entry>
@@ -855,6 +841,9 @@
       <configuration name="All in collections_test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_collections_test - 2018.06.03 at 16h 47m 04s.xml">
+      <configuration name="All in collections_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_collections_test - 2018.06.03 at 16h 51m 20s.xml">
       <configuration name="All in collections_test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CollectorTest - 2018.06.03 at 16h 39m 07s.xml">
@@ -985,6 +974,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CollectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#2182#2183#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/enums/ItemType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/Beaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/Lucas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MuppetsItemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Collector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1017,44 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CollectorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#2182#2183#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/Beaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/Lucas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/behaviours/ICollect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1063,60 +1082,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/enums/ItemType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="21" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MuppetsItemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="e#468#469#0" expanded="true" />
             <element signature="e#511#512#0" expanded="true" />
@@ -1129,6 +1098,26 @@
             <element signature="e#771#772#0" expanded="true" />
             <element signature="e#824#825#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/MuppetsItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/film_memorabilia/StarWarsItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

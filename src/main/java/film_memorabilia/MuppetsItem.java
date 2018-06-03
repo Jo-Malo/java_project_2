@@ -17,7 +17,4 @@ public class MuppetsItem extends Item {
         return this.type;
     }
 
-//    public void setMarketValue(int marketValue) {
-//        this.marketValue = marketValue;
-//    }
 }

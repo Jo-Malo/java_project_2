@@ -26,13 +26,4 @@ public class StarWarsItem extends Item{
     public ItemType getType() {
         return this.type;
     }
-
-    public int getBuyPrice() {
-        return this.buyPrice;
-    }
-
-//    public void setMarketValue(int marketValue) {
-//        this.marketValue = marketValue;
-//    }
-
 }
