@@ -44,5 +44,11 @@ public class StarWarsItemTest {
         assertEquals(50000.00, starWarsCostume.getMarketValue(), 0.01);
     }
 
+    @Test
+    public void canSetMarketValue() {
+        starWarsCostume.setMarketValue(300);
+        assertEquals(300, starWarsCostume.getMarketValue());
+    }
+
 }
 

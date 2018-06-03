@@ -1,5 +1,3 @@
-import behaviours.ICollect;
-import enums.ItemType;
 import film_memorabilia.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,8 +6,8 @@ import static org.junit.Assert.assertEquals;
 
 public class CollectorTest {
     Collector collector;
-    ICollect beaker;
-    ICollect lucas;
+    Beaker beaker;
+    Lucas lucas;
     MuppetsItem muppetsItem;
     StarWarsItem starWarsItem;
 
@@ -27,34 +25,35 @@ public class CollectorTest {
 
     @Test
     public void collectionStartsEmpty() {
-        assertEquals(0, collector.getCollectionSize());
+        assertEquals(0, collector.getTotalCollectionSize());
     }
 
     @Test
     public void canAddItemToCollection() {
         collector.addToCollection(beaker);
-        assertEquals(1, collector.getCollectionSize());
+        assertEquals(1, collector.getTotalCollectionSize());
     }
 
     @Test
     public void canAddLucasAndBeakerToCollection() {
         collector.addToCollection(lucas);
         collector.addToCollection(beaker);
-        assertEquals(2, collector.getCollectionSize());
+        assertEquals(2, collector.getTotalCollectionSize());
     }
 
     @Test
     public void canRemoveItemFromCollection() {
         collector.addToCollection(beaker);
         collector.removeFromCollection(beaker);
-        assertEquals(0, collector.getCollectionSize());
+        assertEquals(0, collector.getTotalCollectionSize());
     }
 
-//    @Test
-//    public void canGetTotalValueOfCollection() {
-//        collector.addToCollection(beaker);
-//        assertEquals(1, collector.totalValueOfCollection());
-//    }
+    @Test
+    public void canGetValueOfTotalCollection() {
+        collector.addToCollection(beaker);
+        collector.addToCollection(lucas);
+        assertEquals(350, collector.totalValueOfCollection(250, 100));
+    }
 
 //    STARWARS COLLECTION //
 
@@ -69,6 +68,12 @@ public class CollectorTest {
         assertEquals(1, collector.StarWarsItemCount());
     }
 
+    @Test
+    public void canGetTotalValueOfStarWars() {
+        collector.addToStarWarsCollection(lucas);
+        assertEquals(100, collector.calculateTotalValueOfStarWarsCollection());
+    }
+
 //    MUPPETS COLLECTION //
 
     @Test
@@ -80,5 +85,12 @@ public class CollectorTest {
     public void canAddToMuppetsCollection() {
         collector.addToMuppetsCollection(muppetsItem);
         assertEquals(1, collector.MuppetsItemCount());
+    }
+
+    @Test
+    public void canGetTotalValueOfMuppets() {
+        collector.addToMuppetsCollection(beaker);
+        collector.addToMuppetsCollection(beaker);
+        assertEquals(500, collector.calculateTotalValueOfMuppetsCollection());
     }
 }

@@ -1,8 +1,6 @@
 package film_memorabilia;
 
 import enums.ItemType;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MuppetsItem extends Item {
@@ -19,13 +17,16 @@ public class MuppetsItem extends Item {
         return this.type;
     }
 
-    @Override
     public int calculateTotal() {
-        return 0;
+            return 0;
 //        int total = 0;
 //        for (double muppet : this.muppets){
 //            total += muppet;
 //        }
 //        return total;
+    }
+
+    public void setMarketValue(int marketValue) {
+        this.marketValue = marketValue;
     }
 }

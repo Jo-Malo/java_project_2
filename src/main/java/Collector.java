@@ -4,11 +4,10 @@ import film_memorabilia.StarWarsItem;
 
 import java.util.ArrayList;
 
-public class Collector {
+public class Collector{
     private String name;
     private ArrayList<ICollect> collection;
 
-//ITEMS BY CATEGORY
     private ArrayList<StarWarsItem> starWarsItems;
     private ArrayList<MuppetsItem> muppetsItems;
 
@@ -16,10 +15,8 @@ public class Collector {
         this.name = name;
         this.collection = new ArrayList<ICollect>();
 
-//ITEMS BY CATEGORY
         starWarsItems = new ArrayList<StarWarsItem>();
         muppetsItems = new ArrayList<MuppetsItem>();
-//        this.starWarsItems = starWarsItems;
     }
 
 //    METHODS
@@ -28,7 +25,11 @@ public class Collector {
         return this.name;
     }
 
-    public int getCollectionSize() {
+    public ArrayList<ICollect> collection() {
+        return collection;
+    }
+
+    public int getTotalCollectionSize() {
         return this.collection.size();
     }
 
@@ -40,13 +41,10 @@ public class Collector {
         this.collection.remove(item);
     }
 
-//    public int totalValueOfCollection() {
-//        int totalValue = 0;
-//        for (ICollect item : this.collection) {
-//            totalValue += item.calculateTotal();
-//        }
-//        return totalValue;
-//    }
+    public int totalValueOfCollection(int calculateTotalValueOfMuppetsCollection, int calculateTotalValueOfStarWarsCollection) {
+        int sum = calculateTotalValueOfMuppetsCollection + calculateTotalValueOfStarWarsCollection;
+        return sum;
+    }
 
 //    STARWARS ITEMS //
 
@@ -62,13 +60,13 @@ public class Collector {
         starWarsItems.add(starWarsItem);
     }
 
-//    public static Double totalValueOfStarWarsItems(ArrayList<StarWarsItem> starWarsItems) {
-//        int sum = 0;
-//        for (StarWarsItem i : starWarsItems) {
-//            sum += i;
-//        }
-//        return sum;
-//    }
+    public int calculateTotalValueOfStarWarsCollection() {
+        int sum = 0;
+        for (StarWarsItem starWarsItem: starWarsItems) {
+            sum += starWarsItem.getBuyPrice();
+        }
+        return sum;
+    }
 
 //    MUPPETS ITEMS //
 
@@ -84,4 +82,13 @@ public class Collector {
     public void addToMuppetsCollection(MuppetsItem muppetsItem) {
         muppetsItems.add(muppetsItem);
     }
+
+    public int calculateTotalValueOfMuppetsCollection() {
+        int sum = 0;
+        for (MuppetsItem muppetsItem: muppetsItems) {
+            sum += muppetsItem.getBuyPrice();
+        }
+        return sum;
+    }
+
 }

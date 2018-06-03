@@ -1,13 +1,14 @@
 package film_memorabilia;
 
-import behaviours.ICollect;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-
-public abstract class Item implements ICollect{
+public abstract class Item{
     protected String itemDescription;
     protected int buyPrice;
     protected int shipping;
     protected int marketValue;
+
 
     public Item(String itemDescription, int buyPrice, int shipping, int marketValue) {
         this.itemDescription = itemDescription;
