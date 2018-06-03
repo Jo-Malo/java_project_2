@@ -31,13 +31,8 @@ public class StarWarsItem extends Item{
         return this.buyPrice;
     }
 
-    public void setMarketValue(int marketValue) {
-        this.marketValue = marketValue;
-    }
-
-    public int calculateTotal() {
-        return 0;
-    }
-
+//    public void setMarketValue(int marketValue) {
+//        this.marketValue = marketValue;
+//    }
 
 }

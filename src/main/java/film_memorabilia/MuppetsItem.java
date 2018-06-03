@@ -17,16 +17,7 @@ public class MuppetsItem extends Item {
         return this.type;
     }
 
-    public int calculateTotal() {
-            return 0;
-//        int total = 0;
-//        for (double muppet : this.muppets){
-//            total += muppet;
-//        }
-//        return total;
-    }
-
-    public void setMarketValue(int marketValue) {
-        this.marketValue = marketValue;
-    }
+//    public void setMarketValue(int marketValue) {
+//        this.marketValue = marketValue;
+//    }
 }

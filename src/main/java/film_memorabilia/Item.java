@@ -1,7 +1,5 @@
 package film_memorabilia;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public abstract class Item{
     protected String itemDescription;
@@ -33,4 +31,7 @@ public abstract class Item{
         return this.marketValue;
     }
 
+    public int setMarketValue(int marketValue) {
+        return this.marketValue = marketValue;
+    }
 }

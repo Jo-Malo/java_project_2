@@ -9,4 +9,5 @@ public class Beaker extends MuppetsItem implements ICollect {
         super(ItemType.PUPPET, itemDescription, buyPrice, shipping, marketValue);
     }
 
+//
 }
