@@ -13,7 +13,7 @@ public class BeakerTest {
 
     @Before
     public void before() {
-        puppetPrototype = new Beaker("The Muppets (2011)", 90, 10, 110, date);
+        puppetPrototype = new Beaker("The Muppets (2011)", 90, 10, 110, "12/04/2018");
     }
 
     @Test

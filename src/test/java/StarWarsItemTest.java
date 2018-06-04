@@ -14,7 +14,9 @@ public class StarWarsItemTest {
 
     @Before
     public void before() {
-        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, "Stormtrooper helmet",1000, 20, 50000, date);
+//        Date currentDate = new Date();
+        String description = "Stormtrooper helmet";
+        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, description,1000, 20, 50000, "12/05/2018");
     }
 
     @Test

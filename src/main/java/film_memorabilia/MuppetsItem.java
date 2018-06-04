@@ -8,8 +8,8 @@ public class MuppetsItem extends Item {
     private ItemType type;
     private ArrayList<Integer> muppets;
 
-    public MuppetsItem(ItemType type, String itemDescription, int buyPrice, int shipping, int marketValue, Date date) {
-        super(itemDescription, buyPrice, shipping, marketValue, date);
+    public MuppetsItem(ItemType type, String itemDescription, int buyPrice, int shipping, int marketValue, String purchaseDate) {
+        super(itemDescription, buyPrice, shipping, marketValue, purchaseDate);
         this.type = type;
         this.muppets = muppets;
     }

@@ -3,19 +3,19 @@ import film_memorabilia.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
 public class MuppetsItemTest {
 
     MuppetsItem muppetsItemPuppet;
-    Date date;
+
+//    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
 
     @Before
     public void before() {
-        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300, date);
-
+        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300, "22/12/2015");
     }
 
     @Test
@@ -50,7 +50,65 @@ public class MuppetsItemTest {
     }
 
     @Test
-    public void canGetDateBought() {
-        assertEquals(date, muppetsItemPuppet.getDateBought());
+    public void canGetPurchaseDate() {
+        assertEquals("22/12/2015", muppetsItemPuppet.getPurchaseDate());
     }
+
+    @Test
+    public void canGetPurchaseDay() {
+        assertEquals("22", muppetsItemPuppet.getPurchaseDay());
+    }
+
+    @Test
+    public void canGetIntPurchaseDay() {
+        assertEquals(22, muppetsItemPuppet.getIntDay("22"));
+    }
+
+    @Test
+    public void canGetPurchaseMonth() {
+        assertEquals("12", muppetsItemPuppet.getPurchaseMonth());
+    }
+
+    @Test
+    public void canGetIntPurchaseMonth() {
+        assertEquals(12, muppetsItemPuppet.getIntMonth("12"));
+    }
+
+    @Test
+    public void canGetPurchaseYear() {
+        assertEquals("2015", muppetsItemPuppet.getPurchaseYear());
+    }
+
+    @Test
+    public void canGetIntPurchaseYear() {
+        assertEquals(2015, muppetsItemPuppet.getIntYear("2015"));
+    }
+
+    @Test
+    public void canCompareYear() {
+      muppetsItemPuppet.getPurchaseYear();
+      muppetsItemPuppet.compareYear(2016, 12/13/1986);
+    }
+
+//    @Test
+//    public void canComparePurchaseYear() {
+//        Integer year = new Integer(2016);
+//        assertEquals(0, muppetsItemPuppet.compareTo(year));
+//    }
+
+//    @Test
+//    public void canGetDateBought() {
+//        Date date = new Date();
+//        System.out.println(dateFormat.format(date));
+//        assertEquals(null, muppetsItemPuppet.getDateBought());
+//    }
+//
+//    @Test
+//    public void canGetLengthOfTimeSinceBuying() {
+//        Date date = new Date();
+//        System.out.println(dateFormat.format(date));
+//        Date anotherDate = new Date();
+//        System.out.println(dateFormat.format(anotherDate));
+//        assertEquals(0, date.compareTo(anotherDate));
+//    }
 }

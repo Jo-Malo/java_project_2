@@ -12,8 +12,8 @@ public class StarWarsItem extends Item{
 
     private ArrayList<StarWarsItem> starWarsItems;
 
-    public StarWarsItem(String film, ItemType type, String itemDescription, int buyPrice, int shipping, int marketValue, Date date) {
-        super(itemDescription, buyPrice, shipping, marketValue, date);
+    public StarWarsItem(String film, ItemType type, String itemDescription, int buyPrice, int shipping, int marketValue, String purchaseDate) {
+        super(itemDescription, buyPrice, shipping, marketValue, purchaseDate);
             this.film = film;
             this.type = type;
 

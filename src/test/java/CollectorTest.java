@@ -18,8 +18,8 @@ public class CollectorTest {
     @Before
     public void before() {
         collector = new Collector("Finn");
-        beaker = new Beaker("Red, fluffy and gormless looking", 250, 50,300, date);
-        georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 150, date);
+        beaker = new Beaker("Red, fluffy and gormless looking", 250, 50,300, "05/06/2018");
+        georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 150, "10/05/2018");
     }
 
     @Test
@@ -73,6 +73,13 @@ public class CollectorTest {
     }
 
     @Test
+    public void canRemoveFromStarWarsCollection() {
+        collector.addToStarWarsCollection(starWarsItem);
+        collector.removeFromStarWarsCollection(starWarsItem);
+        assertEquals(0, collector.StarWarsItemCount());
+    }
+
+    @Test
     public void canGetTotalValueOfStarWars() {
         collector.addToStarWarsCollection(georgeLucas);
         assertEquals(100, collector.calculateTotalValueOfStarWarsItems());
@@ -82,13 +89,20 @@ public class CollectorTest {
 
     @Test
     public void muppetsItemCountStartAtZero() {
-        assertEquals(0, collector.MuppetsItemCount());
+        assertEquals(0, collector.muppetsItemCount());
     }
 
     @Test
     public void canAddToMuppetsCollection() {
         collector.addToMuppetsCollection(muppetsItem);
-        assertEquals(1, collector.MuppetsItemCount());
+        assertEquals(1, collector.muppetsItemCount());
+    }
+
+    @Test
+    public void canRemoveFromMuppetsCollection() {
+        collector.addToMuppetsCollection(muppetsItem);
+        collector.removeFromMuppetsCollection(muppetsItem);
+        assertEquals(0, collector.muppetsItemCount());
     }
 
     @Test

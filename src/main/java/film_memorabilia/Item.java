@@ -8,14 +8,15 @@ public abstract class Item{
     protected int shipping;
     protected int marketValue;
     protected Date date;
+    protected String purchaseDate;
 
 
-    public Item(String itemDescription, int buyPrice, int shipping, int marketValue, Date date) {
+    public Item(String itemDescription, int buyPrice, int shipping, int marketValue, String purchaseDate) {
         this.itemDescription = itemDescription;
         this.buyPrice = buyPrice;
         this.shipping = shipping;
         this.marketValue = marketValue;
-        this.date = date;
+        this.purchaseDate = purchaseDate;
     }
 
     public String getDescription() {
@@ -38,7 +39,51 @@ public abstract class Item{
         return this.marketValue = marketValue;
     }
 
-    public Date getDateBought() {
-        return date;
+    public String getPurchaseDate() {
+        return this.purchaseDate;
     }
+
+    public String setPurchaseDate(String date) {
+        this.purchaseDate = date;
+        return date.toString();
+    }
+
+    public String getPurchaseDay() {
+        String day = purchaseDate.split("/")[0];
+        return day;
+    }
+
+    public int getIntDay(String day) {
+        return Integer.parseInt(day);
+    }
+
+    public String getPurchaseMonth() {
+        String month = purchaseDate.split("/")[1];
+        return month;
+    }
+
+    public int getIntMonth(String month) {
+        return Integer.parseInt(month);
+    }
+
+    public String getPurchaseYear() {
+        String year = purchaseDate.split("/")[2];
+        return year;
+    }
+
+    public int getIntYear(String year) {
+        return Integer.parseInt(year);
+    }
+
+//    public int getCompareTo(int getIntYear, int year) {
+//        int check = getIntYear.compareTo(year);
+//        return check;
+//    }
+
+    public void compareYear(int getIntYear, int date) {
+        if (getIntYear < date) {
+            this.marketValue++;
+        }
+    }
+
 }

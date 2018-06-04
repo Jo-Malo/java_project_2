@@ -60,6 +60,10 @@ public class Collector{
         starWarsItems.add(starWarsItem);
     }
 
+    public void removeFromStarWarsCollection(StarWarsItem starWarsItem) {
+        starWarsItems.remove(starWarsItem);
+    }
+
     public int calculateTotalValueOfStarWarsItems() {
         int sum = 0;
         for (StarWarsItem starWarsItem: starWarsItems) {
@@ -75,12 +79,16 @@ public class Collector{
         return muppetsItems;
     }
 
-    public int MuppetsItemCount() {
+    public int muppetsItemCount() {
         return muppetsItems.size();
     }
 
     public void addToMuppetsCollection(MuppetsItem muppetsItem) {
         muppetsItems.add(muppetsItem);
+    }
+
+    public void removeFromMuppetsCollection(MuppetsItem muppetsItem) {
+        muppetsItems.remove(muppetsItem);
     }
 
     public int calculateTotalValueOfMuppetsItems() {
