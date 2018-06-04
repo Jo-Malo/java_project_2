@@ -13,11 +13,11 @@ public class BeakerTest {
 
     @Before
     public void before() {
-        puppetPrototype = new Beaker("The Muppets (2011)", 90, 40, 110, date);
+        puppetPrototype = new Beaker("The Muppets (2011)", 90, 10, 110, date);
     }
 
     @Test
     public void canGetMarkUp() {
-        assertEquals(20, puppetPrototype.calculateMarkup());
+        assertEquals(10, puppetPrototype.calculateMarkup(100));
     }
 }

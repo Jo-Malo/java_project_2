@@ -16,8 +16,7 @@ public class Beaker extends MuppetsItem implements ICollect {
         return this.buyPrice + this.shipping;
     }
 
-    // edit this using method above
-    public int calculateMarkup() {
-        return this.marketValue - this.buyPrice;
+    public int calculateMarkup(int totalSpendOnItem) {
+        return this.marketValue - totalSpendOnItem;
     }
 }

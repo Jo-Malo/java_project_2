@@ -11,7 +11,12 @@ public class GeorgeLucas extends StarWarsItem implements ICollect {
         super(film, ItemType.SIGNATURE, itemDescription, buyPrice, shipping, marketValue, date);
     }
 
-    public int calculateMarkup() {
-        return this.marketValue - this.buyPrice;
+    // write test for this
+    public int totalSpendOnItem() {
+        return this.buyPrice + this.shipping;
+    }
+
+    public int calculateMarkup(int totalSpendOnItem) {
+        return this.marketValue - totalSpendOnItem;
     }
 }

@@ -18,6 +18,6 @@ public class GeorgeLucasTest {
 
     @Test
     public void canGetMarkUp() {
-        assertEquals(100, georgeLucasClapperboard.calculateMarkup());
+        assertEquals(75, georgeLucasClapperboard.calculateMarkup(325));
     }
 }

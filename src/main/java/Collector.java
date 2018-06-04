@@ -60,7 +60,7 @@ public class Collector{
         starWarsItems.add(starWarsItem);
     }
 
-    public int calculateTotalValueOfStarWarsCollection() {
+    public int calculateTotalValueOfStarWarsItems() {
         int sum = 0;
         for (StarWarsItem starWarsItem: starWarsItems) {
             sum += starWarsItem.getBuyPrice();
@@ -83,7 +83,7 @@ public class Collector{
         muppetsItems.add(muppetsItem);
     }
 
-    public int calculateTotalValueOfMuppetsCollection() {
+    public int calculateTotalValueOfMuppetsItems() {
         int sum = 0;
         for (MuppetsItem muppetsItem: muppetsItems) {
             sum += muppetsItem.getBuyPrice();
