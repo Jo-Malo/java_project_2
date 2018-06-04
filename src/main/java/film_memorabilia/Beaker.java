@@ -10,8 +10,7 @@ public class Beaker extends MuppetsItem implements ICollect {
     public Beaker(String itemDescription, int buyPrice, int shipping, int marketValue, Date date) {
         super(ItemType.PUPPET, itemDescription, buyPrice, shipping, marketValue, date);
     }
-
-    // write test for this
+    
     public int totalSpendOnItem() {
         return this.buyPrice + this.shipping;
     }

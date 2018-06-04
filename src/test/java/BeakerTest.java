@@ -17,6 +17,11 @@ public class BeakerTest {
     }
 
     @Test
+    public void canGetBuyPriceAndShipping() {
+        assertEquals(100, puppetPrototype.totalSpendOnItem());
+    }
+
+    @Test
     public void canGetMarkUp() {
         assertEquals(10, puppetPrototype.calculateMarkup(100));
     }

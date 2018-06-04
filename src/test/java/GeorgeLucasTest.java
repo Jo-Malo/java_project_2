@@ -17,6 +17,11 @@ public class GeorgeLucasTest {
         }
 
     @Test
+    public void canGetBuyPriceAndShipping() {
+        assertEquals(325, georgeLucasClapperboard.totalSpendOnItem());
+    }
+
+    @Test
     public void canGetMarkUp() {
         assertEquals(75, georgeLucasClapperboard.calculateMarkup(325));
     }
