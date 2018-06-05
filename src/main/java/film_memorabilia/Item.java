@@ -76,11 +76,6 @@ public abstract class Item{
     public int getIntYear(String year) {
         return Integer.parseInt(year);
     }
-//
-//    public int getCompareTo(int getIntYear, int year) {
-//        int check = getIntYear.compareTo(year);
-//        return check;
-//    }
 
     public void compareYear(int getIntYear, int date) {
         if (getIntYear < date) {

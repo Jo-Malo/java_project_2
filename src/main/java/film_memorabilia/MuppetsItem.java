@@ -1,9 +1,7 @@
 package film_memorabilia;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import enums.ItemType;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MuppetsItem extends Item {
     private ItemType type;
