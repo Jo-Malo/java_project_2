@@ -1,4 +1,5 @@
 import behaviours.ICollect;
+import film_memorabilia.Item;
 import film_memorabilia.MuppetsItem;
 import film_memorabilia.StarWarsItem;
 
@@ -10,6 +11,8 @@ public class Collector{
 
     private ArrayList<StarWarsItem> starWarsItems;
     private ArrayList<MuppetsItem> muppetsItems;
+    private ArrayList<Item> forSale;
+
 
     public Collector(String name) {
         this.name = name;
@@ -17,6 +20,7 @@ public class Collector{
 
         starWarsItems = new ArrayList<StarWarsItem>();
         muppetsItems = new ArrayList<MuppetsItem>();
+        this.forSale = new ArrayList<Item>();
     }
 
 //    METHODS
@@ -45,6 +49,11 @@ public class Collector{
         int sum = calculateTotalValueOfMuppetsCollection + calculateTotalValueOfStarWarsCollection;
         return sum;
     }
+//
+//    public int getItemValue(Item item) {
+//        return item.marketValue;
+//    }
+
 
 //    STARWARS ITEMS //
 
@@ -97,6 +106,30 @@ public class Collector{
             sum += muppetsItem.getBuyPrice();
         }
         return sum;
+    }
+
+//    FAVOURITE ITEMS
+
+    public ArrayList<Item> forSale() {
+        return new ArrayList<>(forSale);
+    }
+
+    public int countForSale() {
+        return forSale.size();
+    }
+
+    public boolean isFavourite(Item item) {
+        return item.marketValue > 100;
+    }
+
+    public void addToForSale(Item item) {
+        if (!isFavourite(item)) {
+            this.forSale.add(item);
+        }
+    }
+
+    public void soldItem() {
+        this.forSale.clear();
     }
 
 }

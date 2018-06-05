@@ -6,9 +6,10 @@ public abstract class Item{
     protected String itemDescription;
     protected int buyPrice;
     protected int shipping;
-    protected int marketValue;
+    public int marketValue;
     protected Date date;
     protected String purchaseDate;
+    protected Boolean favourite;
 
 
     public Item(String itemDescription, int buyPrice, int shipping, int marketValue, String purchaseDate) {
@@ -17,6 +18,7 @@ public abstract class Item{
         this.shipping = shipping;
         this.marketValue = marketValue;
         this.purchaseDate = purchaseDate;
+        this.favourite = favourite;
     }
 
     public String getDescription() {
@@ -74,7 +76,7 @@ public abstract class Item{
     public int getIntYear(String year) {
         return Integer.parseInt(year);
     }
-
+//
 //    public int getCompareTo(int getIntYear, int year) {
 //        int check = getIntYear.compareTo(year);
 //        return check;

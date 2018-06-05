@@ -1,14 +1,18 @@
 import enums.ItemType;
+import film_memorabilia.Item;
 import film_memorabilia.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class MuppetsItemTest {
 
     MuppetsItem muppetsItemPuppet;
+    MuppetsItem muppetsItemPuppet1;
 
 //    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
@@ -16,6 +20,7 @@ public class MuppetsItemTest {
     @Before
     public void before() {
         muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300, "22/12/2015");
+        muppetsItemPuppet1 = new MuppetsItem(ItemType.POSTER, "Gonzo", 60, 5, 70, "10/2/2018");
     }
 
     @Test

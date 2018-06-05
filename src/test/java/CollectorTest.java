@@ -3,9 +3,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-import java.util.Date;
-
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CollectorTest {
     Collector collector;
@@ -13,13 +12,12 @@ public class CollectorTest {
     GeorgeLucas georgeLucas;
     MuppetsItem muppetsItem;
     StarWarsItem starWarsItem;
-    Date date;
 
     @Before
     public void before() {
         collector = new Collector("Finn");
-        beaker = new Beaker("Red, fluffy and gormless looking", 250, 50,300, "05/06/2018");
-        georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 150, "10/05/2018");
+        beaker = new Beaker("Red, fluffy and gormless looking", 250, 50, 300, "05/06/2018");
+        georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 99, "10/05/2018");
     }
 
     @Test
@@ -110,5 +108,40 @@ public class CollectorTest {
         collector.addToMuppetsCollection(beaker);
         collector.addToMuppetsCollection(beaker);
         assertEquals(500, collector.calculateTotalValueOfMuppetsItems());
+    }
+
+    @Test
+    public void canCheckForSaleListSize() {
+        assertEquals(0, collector.countForSale());
+    }
+
+    @Test
+    public void canGetMarketValue() {
+        assertEquals(300, beaker.getMarketValue());
+    }
+
+    @Test
+    public void canCheckBeakerIsFavourite() {
+        assertEquals(true, collector.isFavourite(beaker));
+    }
+
+    @Test
+    public void canCheckIsNotFavourite() {
+        assertEquals(false, collector.isFavourite(georgeLucas));
+    }
+
+    @Test
+    public void canAddIfNotFavourite() {
+        collector.isFavourite(georgeLucas);
+        collector.addToForSale(georgeLucas);
+        assertEquals(1, collector.countForSale());
+    }
+
+    @Test
+    public void canClearForSaleList() {
+        collector.addToForSale(georgeLucas);
+        assertEquals(1, collector.countForSale());
+        collector.soldItem();
+        assertEquals(0, collector.countForSale());
     }
 }
