@@ -49,11 +49,6 @@ public class Collector{
         int sum = calculateTotalValueOfMuppetsCollection + calculateTotalValueOfStarWarsCollection;
         return sum;
     }
-//
-//    public int getItemValue(Item item) {
-//        return item.marketValue;
-//    }
-
 
 //    STARWARS ITEMS //
 
