@@ -14,7 +14,6 @@ public class StarWarsItemTest {
 
     @Before
     public void before() {
-//        Date currentDate = new Date();
         String description = "Stormtrooper helmet";
         starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, description,1000, 20, 50000, "12/05/2018");
     }
@@ -47,6 +46,11 @@ public class StarWarsItemTest {
     @Test
     public void starWarsCostumeHasMarketValue() {
         assertEquals(50000.00, starWarsCostume.getMarketValue(), 0.01);
+    }
+
+    @Test
+    public void canGetDateBought() {
+        assertEquals("Sat May 12 00:00:00 BST 2018", starWarsCostume.getDate().toString());
     }
 
     @Test

@@ -1,20 +1,16 @@
 import enums.ItemType;
-import film_memorabilia.Item;
 import film_memorabilia.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+
 
 public class MuppetsItemTest {
 
     MuppetsItem muppetsItemPuppet;
     MuppetsItem muppetsItemPuppet1;
-
-//    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
 
     @Before
@@ -54,46 +50,80 @@ public class MuppetsItemTest {
         assertEquals(300, muppetsItemPuppet.getMarketValue());
     }
 
+    //DATE RELATED STUFF
+
     @Test
-    public void canGetPurchaseDate() {
-        assertEquals("22/12/2015", muppetsItemPuppet.getPurchaseDate());
+    public void getToday() {
+        assertEquals("05/06/2018", muppetsItemPuppet.getToday().toString());
     }
 
     @Test
-    public void canGetPurchaseDay() {
-        assertEquals("22", muppetsItemPuppet.getPurchaseDay());
+    public void forComparison() {
+        assertEquals("Tue Jun 05 00:00:00 BST 2018", muppetsItemPuppet.turnIntIntoDate(2018, 06, 05).toString());
     }
 
     @Test
-    public void canGetIntPurchaseDay() {
-        assertEquals(22, muppetsItemPuppet.getIntDay("22"));
+    public void canGetDateBought() {
+        assertEquals("Tue Dec 22 00:00:00 GMT 2015", muppetsItemPuppet.getDate().toString());
     }
 
     @Test
-    public void canGetPurchaseMonth() {
-        assertEquals("12", muppetsItemPuppet.getPurchaseMonth());
+    public void canGetDateFromString() {
+        assertEquals("Thu Mar 15 00:00:00 GMT 2018", muppetsItemPuppet.getDateFromString("15/03/2018").toString());
     }
 
     @Test
-    public void canGetIntPurchaseMonth() {
-        assertEquals(12, muppetsItemPuppet.getIntMonth("12"));
+    public void canTurnIntegerIntoDate() {
+        assertEquals("Thu Mar 15 00:00:00 GMT 2018", muppetsItemPuppet.turnIntIntoDate(2018, 03, 15).toString());
     }
 
     @Test
-    public void canGetPurchaseYear() {
-        assertEquals("2015", muppetsItemPuppet.getPurchaseYear());
+    public void canTurnIntegerToStringDate(){
+        assertEquals("1/1/2017", muppetsItemPuppet.turnIntToStringDate(2017, 01, 01));
     }
 
-    @Test
-    public void canGetIntPurchaseYear() {
-        assertEquals(2015, muppetsItemPuppet.getIntYear("2015"));
-    }
+    //ALL OLD DATE RUBBISH BLAAARGH
 
-    @Test
-    public void canCompareYear() {
-      muppetsItemPuppet.getPurchaseYear();
-      muppetsItemPuppet.compareYear(2016, 12/13/1986);
-    }
+//    @Test
+//    public void canGetPurchaseDate() {
+//        assertEquals("22/12/2015", muppetsItemPuppet.getPurchaseDate());
+//    }
+//
+//    @Test
+//    public void canGetPurchaseDay() {
+//        assertEquals("22", muppetsItemPuppet.getPurchaseDay());
+//    }
+//
+//    @Test
+//    public void canGetIntPurchaseDay() {
+//        assertEquals(22, muppetsItemPuppet.getIntDay("22"));
+//    }
+//
+//    @Test
+//    public void canGetPurchaseMonth() {
+//        assertEquals("12", muppetsItemPuppet.getPurchaseMonth());
+//    }
+//
+//    @Test
+//    public void canGetIntPurchaseMonth() {
+//        assertEquals(12, muppetsItemPuppet.getIntMonth("12"));
+//    }
+//
+//    @Test
+//    public void canGetPurchaseYear() {
+//        assertEquals("2015", muppetsItemPuppet.getPurchaseYear());
+//    }
+//
+//    @Test
+//    public void canGetIntPurchaseYear() {
+//        assertEquals(2015, muppetsItemPuppet.getIntYear("2015"));
+//    }
+//
+//    @Test
+//    public void canCompareYear() {
+//      muppetsItemPuppet.getPurchaseYear();
+//      muppetsItemPuppet.compareYear(2016, 12/13/1986);
+//    }
 
 //    @Test
 //    public void canComparePurchaseYear() {
