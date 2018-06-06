@@ -2,8 +2,8 @@ import behaviours.ICollect;
 import enums.ItemType;
 import film_memorabilia.DateBoughtComparator;
 import film_memorabilia.Item;
-import film_memorabilia.MuppetsItem;
-import film_memorabilia.StarWarsItem;
+import film_memorabilia.filmTitleParents.MuppetsItem;
+import film_memorabilia.filmTitleParents.StarWarsItem;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -149,7 +149,7 @@ public class Collector{
         return itemsBetweenDates.size();
     }
 
-    public ArrayList<Item> getMuppetsItemsBoughtBetweenDates(String stringDate1, String stringDate2) {
+    public ArrayList<Item> getMuppetsBoughtBetweenDates(String stringDate1, String stringDate2) {
         Date date1 = DateBoughtComparator.getFromString(stringDate1);
         Date date2 = DateBoughtComparator.getFromString(stringDate2);
 

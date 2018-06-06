@@ -3,6 +3,7 @@ package film_memorabilia;
 import behaviours.ICollect;
 import enums.Edition;
 import enums.ItemType;
+import film_memorabilia.filmTitleParents.StarWarsItem;
 
 
 public class GeorgeLucas extends StarWarsItem implements ICollect {

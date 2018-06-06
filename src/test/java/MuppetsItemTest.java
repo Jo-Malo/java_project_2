@@ -1,6 +1,6 @@
 import enums.Edition;
 import enums.ItemType;
-import film_memorabilia.MuppetsItem;
+import film_memorabilia.filmTitleParents.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 

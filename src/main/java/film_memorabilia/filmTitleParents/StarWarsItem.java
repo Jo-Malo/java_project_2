@@ -1,12 +1,13 @@
-package film_memorabilia;
+package film_memorabilia.filmTitleParents;
 
 import enums.Edition;
 import enums.ItemType;
+import film_memorabilia.Item;
 
 import java.util.ArrayList;
 
 
-public class StarWarsItem extends Item{
+public class StarWarsItem extends Item {
     private String film;
     private ItemType type;
     private Edition edition;

@@ -1,7 +1,8 @@
-package film_memorabilia;
+package film_memorabilia.filmTitleParents;
 
 import enums.Edition;
 import enums.ItemType;
+import film_memorabilia.Item;
 
 public class MuppetsItem extends Item {
     private ItemType type;

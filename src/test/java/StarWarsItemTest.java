@@ -1,6 +1,6 @@
 import enums.Edition;
 import enums.ItemType;
-import film_memorabilia.StarWarsItem;
+import film_memorabilia.filmTitleParents.StarWarsItem;
 import org.junit.Before;
 import org.junit.Test;
 

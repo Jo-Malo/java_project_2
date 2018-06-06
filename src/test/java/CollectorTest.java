@@ -1,6 +1,8 @@
 import enums.Edition;
 import enums.ItemType;
 import film_memorabilia.*;
+import film_memorabilia.filmTitleParents.MuppetsItem;
+import film_memorabilia.filmTitleParents.StarWarsItem;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -162,7 +164,7 @@ public class CollectorTest {
     @Test
     public void canReturnItemsBoughtBetweenGivenDates() {
         collector.addToMuppetsCollection(muppetsItem);
-        collector.getMuppetsItemsBoughtBetweenDates("05/05/2018", "11/08/2018");
+        collector.getMuppetsBoughtBetweenDates("05/05/2018", "11/08/2018");
         assertEquals(1, collector.itemsBetweenDates.size());
     }
 
