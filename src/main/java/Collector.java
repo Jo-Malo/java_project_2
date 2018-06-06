@@ -1,9 +1,11 @@
 import behaviours.ICollect;
+import enums.ItemType;
 import film_memorabilia.DateBoughtComparator;
 import film_memorabilia.Item;
 import film_memorabilia.MuppetsItem;
 import film_memorabilia.StarWarsItem;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -133,6 +135,12 @@ public class Collector{
 
     //TO CHECK DATES
 
+    public String getToday() {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        return sdf.format(date);
+    }
+
     public void addItemToDatesArray(Item item) {
         itemsBetweenDates.add(item);
     }
@@ -152,6 +160,12 @@ public class Collector{
             }
         }
         return this.itemsBetweenDates;
+    }
+
+    //ENUM POSTER
+
+    public String getPosters() {
+        return ItemType.POSTER.toString();
     }
 
 }

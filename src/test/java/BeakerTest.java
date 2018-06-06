@@ -9,7 +9,6 @@ import static org.junit.Assert.assertEquals;
 public class BeakerTest {
 
     Beaker puppetPrototype;
-    Date date;
 
     @Before
     public void before() {
@@ -25,4 +24,5 @@ public class BeakerTest {
     public void canGetMarkUp() {
         assertEquals(10, puppetPrototype.calculateMarkup(100));
     }
+
 }

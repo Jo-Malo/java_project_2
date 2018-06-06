@@ -15,10 +15,4 @@ public enum ItemType {
         this.type = type;
     }
 
-//    ItemType itemType = ItemType.valueOf("POSTER");
-
-    public String getPosters() {
-        return ItemType.POSTER.toString();
-    }
-
 }

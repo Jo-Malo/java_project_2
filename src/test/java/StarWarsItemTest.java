@@ -4,18 +4,14 @@ import film_memorabilia.StarWarsItem;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Date;
-
 import static org.junit.Assert.assertEquals;
 
 public class StarWarsItemTest {
 
     StarWarsItem starWarsCostume;
-    Date date;
 
     @Before
     public void before() {
-        String description = "Stormtrooper helmet";
         starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, Edition.ORIGINAL,"Stormtrooper helmet", 1000, 20, 50000, "12/05/2018");
     }
 
