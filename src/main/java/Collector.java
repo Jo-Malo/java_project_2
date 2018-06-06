@@ -51,8 +51,8 @@ public class Collector{
         this.collection.remove(item);
     }
 
-    public int totalValueOfCollection(int calculateTotalValueOfMuppetsCollection, int calculateTotalValueOfStarWarsCollection) {
-        int sum = calculateTotalValueOfMuppetsCollection + calculateTotalValueOfStarWarsCollection;
+    public int totalValueOfCollection(int totalValueOfMuppets, int totalValueOfStarWars) {
+        int sum = totalValueOfMuppets + totalValueOfStarWars;
         return sum;
     }
 
@@ -74,7 +74,7 @@ public class Collector{
         starWarsItems.remove(starWarsItem);
     }
 
-    public int calculateTotalValueOfStarWarsItems() {
+    public int totalValueOfStarWars() {
         int sum = 0;
         for (StarWarsItem starWarsItem: starWarsItems) {
             sum += starWarsItem.getBuyPrice();
@@ -101,7 +101,7 @@ public class Collector{
         muppetsItems.remove(muppetsItem);
     }
 
-    public int calculateTotalValueOfMuppetsItems() {
+    public int totalValueOfMuppets() {
         int sum = 0;
         for (MuppetsItem muppetsItem: muppetsItems) {
             sum += muppetsItem.getBuyPrice();
@@ -150,8 +150,8 @@ public class Collector{
     }
 
     public ArrayList<Item> getMuppetsItemsBoughtBetweenDates(String stringDate1, String stringDate2) {
-        Date date1 = DateBoughtComparator.getDateFromString(stringDate1);
-        Date date2 = DateBoughtComparator.getDateFromString(stringDate2);
+        Date date1 = DateBoughtComparator.getFromString(stringDate1);
+        Date date2 = DateBoughtComparator.getFromString(stringDate2);
 
 
         for (Item item : this.muppetsItems) {

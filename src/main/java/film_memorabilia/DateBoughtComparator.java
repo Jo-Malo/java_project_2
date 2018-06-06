@@ -18,7 +18,7 @@ public class DateBoughtComparator implements Comparator<Item>{
         }
     }
 
-    public static Date getDateFromString(String dateToConvert) {
+    public static Date getFromString(String dateToConvert) {
         Date dateToReturn = null;
         try {
             dateToReturn = new SimpleDateFormat("dd/MM/yyyy", Locale.UK).parse(dateToConvert);

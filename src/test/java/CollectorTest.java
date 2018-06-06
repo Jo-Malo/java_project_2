@@ -81,7 +81,7 @@ public class CollectorTest {
     @Test
     public void canGetTotalValueOfStarWars() {
         collector.addToStarWarsCollection(georgeLucas);
-        assertEquals(100, collector.calculateTotalValueOfStarWarsItems());
+        assertEquals(100, collector.totalValueOfStarWars());
     }
 
 //    MUPPETS COLLECTION //
@@ -108,7 +108,7 @@ public class CollectorTest {
     public void canGetTotalValueOfMuppets() {
         collector.addToMuppetsCollection(muppetsItem);
         collector.addToMuppetsCollection(muppetsItem);
-        assertEquals(500, collector.calculateTotalValueOfMuppetsItems());
+        assertEquals(500, collector.totalValueOfMuppets());
     }
 
     @Test
