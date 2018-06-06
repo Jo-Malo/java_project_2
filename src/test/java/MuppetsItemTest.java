@@ -29,6 +29,11 @@ public class MuppetsItemTest {
     }
 
     @Test
+    public void muppetsItemHasEdition() {
+        assertEquals(Edition.REPLICA, muppetsItemPuppet.getEdition());
+    }
+
+    @Test
     public void starWarsCostumeHasDescription() {
         assertEquals("Animal", muppetsItemPuppet.getDescription());
     }

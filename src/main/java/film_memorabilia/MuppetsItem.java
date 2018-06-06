@@ -20,4 +20,7 @@ public class MuppetsItem extends Item {
         return this.type;
     }
 
+    public Edition getEdition() {
+        return this.edition;
+    }
 }

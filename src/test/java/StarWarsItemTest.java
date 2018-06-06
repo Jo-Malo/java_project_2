@@ -30,6 +30,11 @@ public class StarWarsItemTest {
     }
 
     @Test
+    public void setStarWarsCostumeHasEdition() {
+        assertEquals(Edition.ORIGINAL, starWarsCostume.getEdition());
+    }
+
+    @Test
     public void starWarsCostumeHasDescription() {
         assertEquals("Stormtrooper helmet", starWarsCostume.getDescription());
     }
