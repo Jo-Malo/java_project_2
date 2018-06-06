@@ -16,11 +16,10 @@ public abstract class Item{
     public int marketValue;
     protected Date date;
     protected Boolean favourite;
-    //protected String purchaseDate;
 
 
-    public Item(String itemDescription, int buyPrice, int shipping, int marketValue, String dateToConvert) //String purchaseDate) {
-    {   this.itemDescription = itemDescription;
+    public Item(String itemDescription, int buyPrice, int shipping, int marketValue, String dateToConvert) {
+        this.itemDescription = itemDescription;
         this.buyPrice = buyPrice;
         this.shipping = shipping;
         this.marketValue = marketValue;
@@ -29,7 +28,6 @@ public abstract class Item{
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        //this.purchaseDate = purchaseDate;
         this.favourite = favourite;
     }
 
@@ -58,50 +56,6 @@ public abstract class Item{
     public int setMarketValue(int marketValue) {
         return this.marketValue = marketValue;
     }
-
-    //ALL OLD DATE RUBBISH BLAAARGH
-
-//    public String getPurchaseDate() {
-//        return this.purchaseDate;
-//    }
-//
-//    public String setPurchaseDate(String date) {
-//        this.purchaseDate = date;
-//        return date.toString();
-//    }
-//
-//    public String getPurchaseDay() {
-//        String day = purchaseDate.split("/")[0];
-//        return day;
-//    }
-//
-//    public int getIntDay(String day) {
-//        return Integer.parseInt(day);
-//    }
-//
-//    public String getPurchaseMonth() {
-//        String month = purchaseDate.split("/")[1];
-//        return month;
-//    }
-//
-//    public int getIntMonth(String month) {
-//        return Integer.parseInt(month);
-//    }
-//
-//    public String getPurchaseYear() {
-//        String year = purchaseDate.split("/")[2];
-//        return year;
-//    }
-//
-//    public int getIntYear(String year) {
-//        return Integer.parseInt(year);
-//    }
-//
-//    public void compareYear(int getIntYear, int date) {
-//        if (getIntYear < date) {
-//            this.marketValue++;
-//        }
-//    }
 
     //DATE RELATED STUFF
 
