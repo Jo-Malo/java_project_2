@@ -4,12 +4,8 @@ import film_memorabilia.Item;
 import film_memorabilia.MuppetsItem;
 import film_memorabilia.StarWarsItem;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
-import java.util.Locale;
 
 public class Collector{
     private String name;
@@ -145,7 +141,7 @@ public class Collector{
         return itemsBetweenDates.size();
     }
 
-    public ArrayList<Item> getItemsBoughtBetweenDates(String stringDate1, String stringDate2) {
+    public ArrayList<Item> getMuppetsItemsBoughtBetweenDates(String stringDate1, String stringDate2) {
         Date date1 = DateBoughtComparator.getDateFromString(stringDate1);
         Date date2 = DateBoughtComparator.getDateFromString(stringDate2);
 

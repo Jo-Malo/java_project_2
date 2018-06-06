@@ -161,7 +161,7 @@ public class CollectorTest {
     @Test
     public void canReturnItemsBoughtBetweenGivenDates(){
         collector.addToMuppetsCollection(beaker);
-        collector.getItemsBoughtBetweenDates("05/05/2018", "11/08/2018");
+        collector.getMuppetsItemsBoughtBetweenDates("05/05/2018", "11/08/2018");
         assertEquals(1, collector.itemsBetweenDates.size());
     }
 
