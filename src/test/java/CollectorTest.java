@@ -3,6 +3,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class CollectorTest {
@@ -11,12 +13,16 @@ public class CollectorTest {
     GeorgeLucas georgeLucas;
     MuppetsItem muppetsItem;
     StarWarsItem starWarsItem;
+    Item itemsBetweenDates;
+
 
     @Before
     public void before() {
         collector = new Collector("Finn");
         beaker = new Beaker("Red, fluffy and gormless looking", 250, 50, 300, "05/06/2018");
         georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 99, "10/05/2018");
+//        collector.addItemToDatesArray(beaker);
+//        collector.addItemToDatesArray(georgeLucas);
     }
 
     @Test
@@ -143,4 +149,20 @@ public class CollectorTest {
         collector.soldItem();
         assertEquals(0, collector.countForSale());
     }
+
+    //DATES
+
+    @Test
+    public void canAddItemAndCountItemsBetweenDates() {
+        collector.addItemToDatesArray(beaker);
+        assertEquals(1,collector.countItems());
+    }
+
+    @Test
+    public void canReturnItemsBoughtBetweenGivenDates(){
+        collector.addToMuppetsCollection(beaker);
+        collector.getItemsBoughtBetweenDates("05/05/2018", "11/08/2018");
+        assertEquals(1, collector.itemsBetweenDates.size());
+    }
+
 }

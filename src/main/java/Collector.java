@@ -1,9 +1,15 @@
 import behaviours.ICollect;
+import film_memorabilia.DateBoughtComparator;
 import film_memorabilia.Item;
 import film_memorabilia.MuppetsItem;
 import film_memorabilia.StarWarsItem;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Locale;
 
 public class Collector{
     private String name;
@@ -12,6 +18,7 @@ public class Collector{
     private ArrayList<StarWarsItem> starWarsItems;
     private ArrayList<MuppetsItem> muppetsItems;
     private ArrayList<Item> forSale;
+    protected ArrayList<Item> itemsBetweenDates;
 
 
     public Collector(String name) {
@@ -21,6 +28,7 @@ public class Collector{
         starWarsItems = new ArrayList<StarWarsItem>();
         muppetsItems = new ArrayList<MuppetsItem>();
         this.forSale = new ArrayList<Item>();
+        this.itemsBetweenDates = new ArrayList<Item>();
     }
 
 //    METHODS
@@ -125,6 +133,29 @@ public class Collector{
 
     public void soldItem() {
         this.forSale.clear();
+    }
+
+    //TO CHECK DATES
+
+    public void addItemToDatesArray(Item item) {
+        itemsBetweenDates.add(item);
+    }
+
+    public int countItems() {
+        return itemsBetweenDates.size();
+    }
+
+    public ArrayList<Item> getItemsBoughtBetweenDates(String stringDate1, String stringDate2) {
+        Date date1 = DateBoughtComparator.getDateFromString(stringDate1);
+        Date date2 = DateBoughtComparator.getDateFromString(stringDate2);
+
+
+        for (Item item : this.muppetsItems) {
+            if (item.getDate().after(date1) && item.getDate().before(date2)) {
+                this.itemsBetweenDates.add(item);
+            }
+        }
+        return this.itemsBetweenDates;
     }
 
 }

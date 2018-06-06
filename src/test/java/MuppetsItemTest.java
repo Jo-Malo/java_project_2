@@ -76,13 +76,13 @@ public class MuppetsItemTest {
 //        }
 
     @Test
-    public void forComparison() {
-        assertEquals("Tue Jun 05 00:00:00 BST 2018", muppetsItemPuppet.turnIntIntoDate(2018, 06, 05).toString());
+    public void canGetDateBought() {
+        assertEquals("Tue Dec 22 00:00:00 GMT 2015", muppetsItemPuppet.getDate().toString());
     }
 
     @Test
-    public void canGetDateBought() {
-        assertEquals("Tue Dec 22 00:00:00 GMT 2015", muppetsItemPuppet.getDate().toString());
+    public void forComparison() {
+        assertEquals("Tue Jun 05 00:00:00 BST 2018", muppetsItemPuppet.turnIntIntoDate(2018, 06, 05).toString());
     }
 
     @Test
@@ -93,11 +93,6 @@ public class MuppetsItemTest {
     @Test
     public void canTurnIntegerIntoDate() {
         assertEquals("Thu Mar 15 00:00:00 GMT 2018", muppetsItemPuppet.turnIntIntoDate(2018, 03, 15).toString());
-    }
-
-    @Test
-    public void canTurnIntegerToStringDate(){
-        assertEquals("1/1/2017", muppetsItemPuppet.turnIntToStringDate(2017, 01, 01));
     }
 
     //ALL OLD DATE RUBBISH BLAAARGH

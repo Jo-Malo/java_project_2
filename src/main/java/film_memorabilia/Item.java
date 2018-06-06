@@ -1,7 +1,11 @@
 package film_memorabilia;
 
+import behaviours.ICollect;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Locale;
 
@@ -134,19 +138,6 @@ public abstract class Item{
             e.printStackTrace();
 
         }
-        return dateToReturn;
-    }
-
-    public static String turnIntToStringDate(int year, int month, int day){
-        Integer integerYear = (Integer) year;
-        Integer integerMonth = (Integer) month;
-        Integer integerDay = (Integer) day;
-
-        String stringYear = integerYear.toString();
-        String stringMonth = integerMonth.toString();
-        String stringDay = integerDay.toString();
-
-        String dateToReturn = stringDay + "/" + stringMonth + "/" + stringYear;
         return dateToReturn;
     }
 
