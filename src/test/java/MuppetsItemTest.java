@@ -1,8 +1,11 @@
+import enums.Edition;
 import enums.ItemType;
 import film_memorabilia.MuppetsItem;
 import org.junit.Before;
 import org.junit.Test;
 
+
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,12 +14,13 @@ public class MuppetsItemTest {
 
     MuppetsItem muppetsItemPuppet;
     MuppetsItem muppetsItemPuppet1;
+    Date date;
 
 
     @Before
     public void before() {
-        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, "Animal", 200, 30,300, "22/12/2015");
-        muppetsItemPuppet1 = new MuppetsItem(ItemType.POSTER, "Gonzo", 60, 5, 70, "10/2/2018");
+        muppetsItemPuppet = new MuppetsItem(ItemType.PUPPET, Edition.REPLICA, "Animal", 200, 30,300, "22/12/2015");
+        muppetsItemPuppet1 = new MuppetsItem(ItemType.POSTER, Edition.ORIGINAL,"Gonzo", 60, 5, 70, "10/2/2018");
     }
 
     @Test
@@ -54,8 +58,17 @@ public class MuppetsItemTest {
 
     @Test
     public void getToday() {
-        assertEquals("05/06/2018", muppetsItemPuppet.getToday().toString());
+        assertEquals("06/06/2018", muppetsItemPuppet.getToday().toString());
     }
+
+//    @Test
+//    public int compareTodayWithDateBought() {
+////        Date buyDate = new Date();
+////        Date otherDate = new Date();
+////        int result = buyDate.compareDate();
+//        assertEquals(-1, muppetsItemPuppet.compareDate("Tue Jun 05 00:00:00 GMT 2018", "Thu Nov 15 00:00:00 GMT 2018"););
+////        return result;
+//        }
 
     @Test
     public void forComparison() {

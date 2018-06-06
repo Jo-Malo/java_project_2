@@ -1,3 +1,4 @@
+import enums.Edition;
 import enums.ItemType;
 import film_memorabilia.StarWarsItem;
 import org.junit.Before;
@@ -15,7 +16,7 @@ public class StarWarsItemTest {
     @Before
     public void before() {
         String description = "Stormtrooper helmet";
-        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, description,1000, 20, 50000, "12/05/2018");
+        starWarsCostume = new StarWarsItem("A New Hope", ItemType.COSTUME, Edition.ORIGINAL,"Stormtrooper helmet", 1000, 20, 50000, "12/05/2018");
     }
 
     @Test

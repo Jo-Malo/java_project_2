@@ -2,7 +2,6 @@ package film_memorabilia;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -89,16 +88,16 @@ public abstract class Item{
 //        String year = purchaseDate.split("/")[2];
 //        return year;
 //    }
-
-    public int getIntYear(String year) {
-        return Integer.parseInt(year);
-    }
-
-    public void compareYear(int getIntYear, int date) {
-        if (getIntYear < date) {
-            this.marketValue++;
-        }
-    }
+//
+//    public int getIntYear(String year) {
+//        return Integer.parseInt(year);
+//    }
+//
+//    public void compareYear(int getIntYear, int date) {
+//        if (getIntYear < date) {
+//            this.marketValue++;
+//        }
+//    }
 
     //DATE RELATED STUFF
 
@@ -135,7 +134,6 @@ public abstract class Item{
             e.printStackTrace();
 
         }
-
         return dateToReturn;
     }
 
@@ -150,5 +148,15 @@ public abstract class Item{
 
         String dateToReturn = stringDay + "/" + stringMonth + "/" + stringYear;
         return dateToReturn;
+    }
+
+    public void compareDate(Date dateBought, Date date2) {
+        if ( dateBought.compareTo(date2) == 0 ){
+            System.out.println("Yep, you bought this today!");
+        } else if (dateBought.compareTo(date2) == -1) {
+            System.out.println("You've had this for a bit");
+        } else {
+            System.out.println("this shouldn't be possible");
+        }
     }
 }
