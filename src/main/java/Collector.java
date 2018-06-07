@@ -112,7 +112,7 @@ public class Collector{
 //    FAVOURITE ITEMS
 
     public ArrayList<Item> forSale() {
-        return new ArrayList<>(forSale);
+        return forSale;
     }
 
     public int countForSale() {

@@ -32,6 +32,13 @@ public abstract class Item{
         }
     }
 
+    public Enum<ItemType> getType() {
+        return this.type;
+    }
+    public Enum<Edition> getEdition() {
+        return this.edition;
+    }
+
     public String getDescription() {
         return this.itemDescription;
     }

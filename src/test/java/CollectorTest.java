@@ -11,7 +11,6 @@ public class CollectorTest {
     GeorgeLucas georgeLucas;
     Beaker beaker;
 
-
     @Before
     public void before() {
         collector = new Collector("Finn - DON'T LEAVE US!");
@@ -56,7 +55,7 @@ public class CollectorTest {
         assertEquals(350, collector.totalValueOfCollection(250, 100));
     }
 
-//    STARWARS COLLECTION //
+//    STARWARS COLLECTION TESTS//
 
     @Test
     public void starWarsCollectionCountStartAtZero() {
@@ -66,6 +65,7 @@ public class CollectorTest {
     @Test
     public void canAddToStarWarsCollection() {
         collector.addToStarWarsCollection(georgeLucas);
+        collector.getAllStarWarsItems();
         assertEquals(1, collector.StarWarsItemCount());
     }
 
@@ -82,7 +82,7 @@ public class CollectorTest {
         assertEquals(100, collector.totalValueOfStarWars());
     }
 
-//    MUPPETS COLLECTION //
+//    MUPPETS COLLECTION TESTS//
 
     @Test
     public void muppetsItemCountStartAtZero() {
@@ -92,6 +92,7 @@ public class CollectorTest {
     @Test
     public void canAddToMuppetsCollection() {
         collector.addToMuppetsCollection(beaker);
+        collector.getMuppetsItems();
         assertEquals(1, collector.muppetsItemCount());
     }
 
@@ -108,6 +109,8 @@ public class CollectorTest {
         collector.addToMuppetsCollection(beaker);
         assertEquals(500, collector.totalValueOfMuppets());
     }
+
+    //FAVOURITE ITEM TESTS
 
     @Test
     public void canCheckForSaleListSize() {
@@ -137,6 +140,11 @@ public class CollectorTest {
     }
 
     @Test
+    public void canGetForSaleList() {
+        assertEquals(0, collector.forSale().size());
+    }
+
+    @Test
     public void canClearForSaleList() {
         collector.addToForSale(georgeLucas);
         assertEquals(1, collector.countForSale());
@@ -144,7 +152,7 @@ public class CollectorTest {
         assertEquals(0, collector.countForSale());
     }
 
-    //DATES
+    //DATE TESTS
 
     @Test
     public void getToday() {
