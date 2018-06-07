@@ -1,7 +1,7 @@
-import behaviours.ICollect;
 import enums.ItemType;
 import film_memorabilia.DateBoughtComparator;
 import film_memorabilia.Item;
+import film_memorabilia.filmTitleParents.JawsItem;
 import film_memorabilia.filmTitleParents.MuppetsItem;
 import film_memorabilia.filmTitleParents.StarWarsItem;
 
@@ -15,6 +15,7 @@ public class Collector{
 
     private ArrayList<StarWarsItem> starWarsItems;
     private ArrayList<MuppetsItem> muppetsItems;
+    private ArrayList<JawsItem> jawsItems;
     private ArrayList<Item> forSale;
     protected ArrayList<Item> itemsBetweenDates;
 
@@ -25,6 +26,7 @@ public class Collector{
 
         starWarsItems = new ArrayList<StarWarsItem>();
         muppetsItems = new ArrayList<MuppetsItem>();
+        jawsItems = new ArrayList<JawsItem>();
         this.forSale = new ArrayList<Item>();
         this.itemsBetweenDates = new ArrayList<Item>();
     }
@@ -49,6 +51,16 @@ public class Collector{
 
     public void removeFromCollection(Item item) {
         this.collection.remove(item);
+    }
+
+    public void fillCollection() {
+        collection.addAll(starWarsItems);
+        collection.addAll(muppetsItems);
+        collection.addAll(jawsItems);
+    }
+
+    public void emptyCollection() {
+        collection.clear();
     }
 
     public int totalValueOfCollection(int totalValueOfMuppets, int totalValueOfStarWars) {

@@ -14,7 +14,11 @@ public class CollectorTest {
     @Before
     public void before() {
         collector = new Collector("Finn - DON'T LEAVE US!");
+
+        //MUPPETS ITEM
         beaker = new Beaker(ItemType.POSTER, Edition.NOVELTY, "Red, fluffy and gormless looking", 250, 50, 300, "05/06/2018");
+
+        //STARWARS ITEM
         georgeLucas = new GeorgeLucas("The Empire Strikes Back", ItemType.SIGNATURE, Edition.ORIGINAL, "genuine autograph from 2015", 100, 25, 99, "10/05/2018");
     }
 
