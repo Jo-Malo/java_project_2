@@ -1,8 +1,6 @@
 import enums.Edition;
 import enums.ItemType;
 import film_memorabilia.*;
-import film_memorabilia.filmTitleParents.MuppetsItem;
-import film_memorabilia.filmTitleParents.StarWarsItem;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,22 +8,20 @@ import static org.junit.Assert.assertEquals;
 
 public class CollectorTest {
     Collector collector;
-    Beaker beaker;
     GeorgeLucas georgeLucas;
-    MuppetsItem muppetsItem;
-    StarWarsItem starWarsItem;
+    Beaker beaker;
 
 
     @Before
     public void before() {
-        collector = new Collector("Finn");
-        muppetsItem = new MuppetsItem(ItemType.POSTER, Edition.NOVELTY, "Red, fluffy and gormless looking", 250, 50, 300, "05/06/2018");
-        georgeLucas = new GeorgeLucas("The Force Awakens", "genuine autograph from 2015", 100, 25, 99, "10/05/2018");
+        collector = new Collector("Finn - DON'T LEAVE US!");
+        beaker = new Beaker(ItemType.POSTER, Edition.NOVELTY, "Red, fluffy and gormless looking", 250, 50, 300, "05/06/2018");
+        georgeLucas = new GeorgeLucas("The Empire Strikes Back", ItemType.SIGNATURE, Edition.ORIGINAL, "genuine autograph from 2015", 100, 25, 99, "10/05/2018");
     }
 
     @Test
     public void hasName() {
-        assertEquals("Finn", collector.getName());
+        assertEquals("Finn - DON'T LEAVE US!", collector.getName());
     }
 
     @Test
@@ -69,14 +65,14 @@ public class CollectorTest {
 
     @Test
     public void canAddToStarWarsCollection() {
-        collector.addToStarWarsCollection(starWarsItem);
+        collector.addToStarWarsCollection(georgeLucas);
         assertEquals(1, collector.StarWarsItemCount());
     }
 
     @Test
     public void canRemoveFromStarWarsCollection() {
-        collector.addToStarWarsCollection(starWarsItem);
-        collector.removeFromStarWarsCollection(starWarsItem);
+        collector.addToStarWarsCollection(georgeLucas);
+        collector.removeFromStarWarsCollection(georgeLucas);
         assertEquals(0, collector.StarWarsItemCount());
     }
 
@@ -95,21 +91,21 @@ public class CollectorTest {
 
     @Test
     public void canAddToMuppetsCollection() {
-        collector.addToMuppetsCollection(muppetsItem);
+        collector.addToMuppetsCollection(beaker);
         assertEquals(1, collector.muppetsItemCount());
     }
 
     @Test
     public void canRemoveFromMuppetsCollection() {
-        collector.addToMuppetsCollection(muppetsItem);
-        collector.removeFromMuppetsCollection(muppetsItem);
+        collector.addToMuppetsCollection(beaker);
+        collector.removeFromMuppetsCollection(beaker);
         assertEquals(0, collector.muppetsItemCount());
     }
 
     @Test
     public void canGetTotalValueOfMuppets() {
-        collector.addToMuppetsCollection(muppetsItem);
-        collector.addToMuppetsCollection(muppetsItem);
+        collector.addToMuppetsCollection(beaker);
+        collector.addToMuppetsCollection(beaker);
         assertEquals(500, collector.totalValueOfMuppets());
     }
 
@@ -120,12 +116,12 @@ public class CollectorTest {
 
     @Test
     public void canGetMarketValue() {
-        assertEquals(300, muppetsItem.getMarketValue());
+        assertEquals(300, beaker.getMarketValue());
     }
 
     @Test
     public void canCheckBeakerIsFavourite() {
-        assertEquals(true, collector.isFavourite(muppetsItem));
+        assertEquals(true, collector.isFavourite(beaker));
     }
 
     @Test
@@ -152,18 +148,18 @@ public class CollectorTest {
 
     @Test
     public void getToday() {
-        assertEquals("06/06/2018", collector.getToday().toString());
+        assertEquals("07/06/2018", collector.getToday().toString());
     }
 
     @Test
     public void canAddItemAndCountItemsBetweenDates() {
-        collector.addItemToDatesArray(muppetsItem);
+        collector.addItemToDatesArray(beaker);
         assertEquals(1,collector.countItems());
     }
 
     @Test
     public void canReturnItemsBoughtBetweenGivenDates() {
-        collector.addToMuppetsCollection(muppetsItem);
+        collector.addToMuppetsCollection(beaker);
         collector.getMuppetsBoughtBetweenDates("05/05/2018", "11/08/2018");
         assertEquals(1, collector.itemsBetweenDates.size());
     }

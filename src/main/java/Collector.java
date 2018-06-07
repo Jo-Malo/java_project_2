@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class Collector{
     private String name;
-    private ArrayList<ICollect> collection;
+    private ArrayList<Item> collection;
 
     private ArrayList<StarWarsItem> starWarsItems;
     private ArrayList<MuppetsItem> muppetsItems;
@@ -21,7 +21,7 @@ public class Collector{
 
     public Collector(String name) {
         this.name = name;
-        this.collection = new ArrayList<ICollect>();
+        this.collection = new ArrayList<Item>();
 
         starWarsItems = new ArrayList<StarWarsItem>();
         muppetsItems = new ArrayList<MuppetsItem>();
@@ -35,7 +35,7 @@ public class Collector{
         return this.name;
     }
 
-    public ArrayList<ICollect> collection() {
+    public ArrayList<Item> collection() {
         return collection;
     }
 
@@ -43,11 +43,11 @@ public class Collector{
         return this.collection.size();
     }
 
-    public void addToCollection(ICollect item) {
+    public void addToCollection(Item item) {
         this.collection.add(item);
     }
 
-    public void removeFromCollection(ICollect item) {
+    public void removeFromCollection(Item item) {
         this.collection.remove(item);
     }
 

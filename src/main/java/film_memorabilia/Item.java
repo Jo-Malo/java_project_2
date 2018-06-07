@@ -1,11 +1,16 @@
 package film_memorabilia;
 
+import enums.Edition;
+import enums.ItemType;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public abstract class Item{
+    private ItemType type;
+    private Edition edition;
     protected String itemDescription;
     protected int buyPrice;
     protected int shipping;
@@ -13,7 +18,9 @@ public abstract class Item{
     protected Date date;
 
 
-    public Item(String itemDescription, int buyPrice, int shipping, int marketValue, String dateToConvert) {
+    public Item(ItemType type, Edition edition, String itemDescription, int buyPrice, int shipping, int marketValue, String dateToConvert) {
+        this.type = type;
+        this.edition = edition;
         this.itemDescription = itemDescription;
         this.buyPrice = buyPrice;
         this.shipping = shipping;

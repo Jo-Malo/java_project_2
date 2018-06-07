@@ -1,3 +1,5 @@
+import enums.Edition;
+import enums.ItemType;
 import film_memorabilia.Beaker;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +14,7 @@ public class BeakerTest {
 
     @Before
     public void before() {
-        puppetPrototype = new Beaker("The Muppets (2011)", 90, 10, 110, "12/04/2018");
+        puppetPrototype = new Beaker(ItemType.PUPPET, Edition.REPLICA, "The Muppets (2011)", 90, 10, 110, "12/04/2018");
     }
 
     @Test

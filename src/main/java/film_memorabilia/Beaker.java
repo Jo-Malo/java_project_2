@@ -8,8 +8,8 @@ import film_memorabilia.filmTitleParents.MuppetsItem;
 
 public class Beaker extends MuppetsItem implements ICollect {
 
-    public Beaker(String itemDescription, int buyPrice, int shipping, int marketValue, String purchaseDate) {
-        super(ItemType.PUPPET, Edition.REPLICA, itemDescription, buyPrice, shipping, marketValue, purchaseDate);
+    public Beaker(ItemType type, Edition edition, String itemDescription, int buyPrice, int shipping, int marketValue, String purchaseDate) {
+        super(type, edition, itemDescription, buyPrice, shipping, marketValue, purchaseDate);
     }
 
     public int totalSpendOnItem() {
