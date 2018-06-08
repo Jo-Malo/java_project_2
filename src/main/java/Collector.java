@@ -53,16 +53,6 @@ public class Collector{
         this.collection.remove(item);
     }
 
-    public void fillCollection() {
-        collection.addAll(starWarsItems);
-        collection.addAll(muppetsItems);
-        collection.addAll(jawsItems);
-    }
-
-    public void emptyCollection() {
-        collection.clear();
-    }
-
     public int totalValueOfCollection(int totalValueOfMuppets, int totalValueOfStarWars) {
         int sum = totalValueOfMuppets + totalValueOfStarWars;
         return sum;

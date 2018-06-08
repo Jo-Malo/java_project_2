@@ -59,6 +59,12 @@ public class CollectorTest {
         assertEquals(350, collector.totalValueOfCollection(250, 100));
     }
 
+//    @Test
+//    public void canFillCollectionWithAllItems() {
+//        collector.fillCollection();
+//        assertEquals(0, collector.getTotalCollectionSize());
+//    }
+
 //    STARWARS COLLECTION TESTS//
 
     @Test
@@ -160,7 +166,7 @@ public class CollectorTest {
 
     @Test
     public void getToday() {
-        assertEquals("07/06/2018", collector.getToday().toString());
+        assertEquals("08/06/2018", collector.getToday().toString());
     }
 
     @Test
